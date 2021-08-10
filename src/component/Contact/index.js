@@ -2,13 +2,14 @@ import React, { useState } from "react";
 
 function ContactForm() {
 
-    const { name, email, message } = formState;
+    
     const [formState, setFormState] = useState({ 
         name: '', 
         email: '', 
         message: '' 
     });
-
+    
+    const { name, email, message } = formState;
     function handleChange(e) {
         setFormState({...formState, name: e.target.value })
       }
