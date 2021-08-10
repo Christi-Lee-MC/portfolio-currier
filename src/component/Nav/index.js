@@ -11,7 +11,7 @@ function Nav(props) {
 
   return (
     <header className="flex-row px-1">
-      <BrowserRouter>
+      
         <h2>Portfolio: Christi-Lee Currier</h2>
         <nav>
           <ul className="flex-row">
@@ -28,7 +28,7 @@ function Nav(props) {
             </li>
           </ul>
         </nav>
-      </BrowserRouter>
+      
     </header>
   );
 }

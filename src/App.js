@@ -4,7 +4,6 @@ import ContactForm from "./component/Contact";
 import Nav from "./component/Nav";
 // import Portfolio from "./component/Portfolio";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
-
 function App() {
   const [contactSelected, setContactSelected] = useState(false);
   const [page] = useState([
@@ -19,8 +18,8 @@ function App() {
     },
   ]);
   const [currentPage, setCurrentPage] = useState(page[0]);
-
   return (
+    <BrowserRouter>
     <div>
       <Nav
         page={page}
@@ -28,7 +27,7 @@ function App() {
         currentPage={currentPage}
       ></Nav>
       <main>
-        <BrowserRouter>
+      
           <Switch>
             <Route path="/">
               <About></About>
@@ -38,10 +37,10 @@ function App() {
               <ContactForm></ContactForm>
             </Route>
           </Switch>
-        </BrowserRouter>
+        
       </main>
     </div>
+    </BrowserRouter>
   );
 }
-
 export default App;
